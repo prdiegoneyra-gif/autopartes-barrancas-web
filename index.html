@@ -200,6 +200,17 @@ footer{background:#08090b;border-top:1px solid var(--border);padding:56px 0 0}
 .f-credit:hover .prdr-word{fill:#fff}
 .f-credit span{opacity:.85}
 
+/* ---------- SELLO HABILITADO RUDAC ---------- */
+.f-cert{display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:24px}
+.f-cert .seal{flex:none;width:96px;height:96px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.5))}
+.f-cert .cert-h{font-size:.98rem;font-weight:800;letter-spacing:.01em}
+.f-cert .cert-h span{color:var(--accent-2)}
+.f-cert .cert-d{font-size:.8rem;color:var(--muted);margin-top:4px;line-height:1.55}
+.f-cert .cert-d strong{color:#c8cfd8;font-weight:700}
+.f-cert .cert-verify{display:inline-block;margin-top:7px;font-size:.76rem;font-weight:700;color:var(--accent-2);text-decoration:none}
+.f-cert .cert-verify:hover{text-decoration:underline}
+@media(max-width:640px){.f-cert{flex-direction:column;text-align:center}.f-cert .cert-d{text-align:center}}
+
 /* ---------- FLOATING WSP ---------- */
 .wsp-float{position:fixed;right:22px;bottom:22px;z-index:120;width:60px;height:60px;border-radius:50%;background:var(--wsp);display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.35);transition:transform .15s}
 .wsp-float:hover{transform:scale(1.08)}
@@ -443,6 +454,46 @@ footer{background:#08090b;border-top:1px solid var(--border);padding:56px 0 0}
           <li>Lun a Vie: 8:00 a 17:00 hs</li>
           <li>Sáb: 8:00 a 12:00 hs</li>
         </ul>
+      </div>
+    </div>
+    <!-- ===== SELLO DESARMADERO HABILITADO RUDAC ===== -->
+    <div class="f-cert">
+      <svg class="seal" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Desarmadero habilitado RUDAC, inscripcion N 3712">
+        <defs>
+          <radialGradient id="rd-disc" cx="42%" cy="34%" r="75%">
+            <stop offset="0" stop-color="#1b222c"/><stop offset="1" stop-color="#0c0f14"/>
+          </radialGradient>
+          <linearGradient id="rd-steel" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#eef2f7"/><stop offset=".5" stop-color="#aab4c2"/><stop offset="1" stop-color="#727d8c"/>
+          </linearGradient>
+          <linearGradient id="rd-blue" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#5b8ef0"/><stop offset="1" stop-color="#2f6fe0"/>
+          </linearGradient>
+          <path id="rd-arcTop" d="M 120 120 m -92 0 a 92 92 0 0 1 184 0" fill="none"/>
+          <path id="rd-arcBot" d="M 120 120 m 82 0 a 82 82 0 0 1 -164 0" fill="none"/>
+        </defs>
+        <circle cx="120" cy="120" r="114" fill="none" stroke="url(#rd-steel)" stroke-width="3"/>
+        <circle cx="120" cy="120" r="108" fill="url(#rd-disc)" stroke="#313a47" stroke-width="1"/>
+        <circle cx="120" cy="120" r="99" fill="none" stroke="#3a4552" stroke-width="1"/>
+        <circle cx="120" cy="120" r="70" fill="none" stroke="#3a4552" stroke-width="1"/>
+        <text font-family="Inter,system-ui,sans-serif" font-weight="800" letter-spacing="2" font-size="15" fill="#dfe6ef">
+          <textPath href="#rd-arcTop" startOffset="50%" text-anchor="middle">DESARMADERO HABILITADO</textPath></text>
+        <text font-family="Inter,system-ui,sans-serif" font-weight="800" letter-spacing="1.4" font-size="10.5" fill="#9fb6e6">
+          <textPath href="#rd-arcBot" startOffset="50%" text-anchor="middle">RUDAC · DNRPA · LEY 25.761</textPath></text>
+        <g fill="#5b8ef0"><circle cx="26.5" cy="120" r="2.6"/><circle cx="213.5" cy="120" r="2.6"/></g>
+        <g transform="translate(120 108)">
+          <path d="M0 -34 L26 -25 V-2 C26 16 14 27 0 33 C-14 27 -26 16 -26 -2 V-25 Z" fill="url(#rd-blue)" stroke="#8fb2f5" stroke-width="1.2"/>
+          <path d="M-11 -3 L-3 6 L13 -13" fill="none" stroke="#fff" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <text x="120" y="176" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-weight="900" font-size="17" fill="#eef2f7" letter-spacing="1">N.° 3712</text>
+        <text x="120" y="190" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-weight="700" font-size="8.2" fill="#9aa3ad" letter-spacing="1.5">R. N. OCHOA · BARRANCAS</text>
+      </svg>
+      <div>
+        <div class="cert-h">Desarmadero <span>Habilitado</span></div>
+        <div class="cert-d">RUDAC · Ley 25.761 · DNRPA<br>
+          Inscripción N.° 3712 — Titular: <strong>Roberto Nahuel Ochoa</strong><br>
+          CUIT 20-33847787-3 · Barrancas, Santa Fe</div>
+        <a class="cert-verify" href="https://www.dnrpa.gov.ar/desarmadero/consulta_inscriptos_web.php" target="_blank" rel="noopener">Verificar inscripción en la DNRPA ↗</a>
       </div>
     </div>
     <div class="f-bottom">
