@@ -547,5 +547,16 @@ document.querySelectorAll('.nav-links a').forEach(a=>{
   a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open'));
 });
 </script>
+  <!-- Meta Pixel: evento Lead al hacer clic en WhatsApp -->
+  <script>
+  (function(){
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="whatsapp"], a[href*="wa.me"]');
+      if(a && typeof window.fbq === 'function'){
+        fbq('track', 'Lead', {content_name: 'Click WhatsApp', source: 'web'});
+      }
+    }, true);
+  })();
+  </script>
 </body>
 </html>
