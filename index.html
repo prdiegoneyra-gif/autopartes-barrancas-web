@@ -556,13 +556,17 @@ document.querySelectorAll('.nav-links a').forEach(a=>{
   a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open'));
 });
 </script>
-  <!-- Meta Pixel: evento Lead al hacer clic en WhatsApp -->
+  <!-- Conversion: clic en WhatsApp -> Meta Pixel (Lead) + Google Analytics 4 (generate_lead) -->
   <script>
   (function(){
     document.addEventListener('click', function(e){
       var a = e.target.closest && e.target.closest('a[href*="whatsapp"], a[href*="wa.me"]');
-      if(a && typeof window.fbq === 'function'){
+      if(!a) return;
+      if(typeof window.fbq === 'function'){
         fbq('track', 'Lead', {content_name: 'Click WhatsApp', source: 'web'});
+      }
+      if(typeof window.gtag === 'function'){
+        gtag('event', 'generate_lead', {event_category: 'WhatsApp', event_label: 'Click WhatsApp', method: 'whatsapp'});
       }
     }, true);
   })();
