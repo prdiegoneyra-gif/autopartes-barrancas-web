@@ -205,9 +205,9 @@ footer{background:#08090b;border-top:1px solid var(--border);padding:56px 0 0}
 .f-social a{width:40px;height:40px;border-radius:11px;border:1px solid var(--border);display:grid;place-items:center;color:var(--muted);transition:all .15s}
 .f-social a:hover{color:#fff;border-color:var(--accent);background:rgba(47,111,224,.1)}
 .f-bottom{border-top:1px solid var(--border);padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
-.f-credit{display:inline-flex;align-items:center;gap:9px;color:var(--muted)}
-.f-credit:hover .prdr-word{fill:#fff}
-.f-credit span{opacity:.85}
+.f-credit{display:inline-flex;align-items:center;gap:5px;color:var(--muted);text-decoration:none;font-size:.8rem;letter-spacing:.02em;min-height:44px}
+.f-credit strong{color:#00b8d9;font-weight:700}
+.f-credit:hover strong{text-decoration:underline}
 
 /* ---------- SELLO HABILITADO RUDAC ---------- */
 .f-cert{display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:24px}
@@ -524,23 +524,7 @@ footer{background:#08090b;border-top:1px solid var(--border);padding:56px 0 0}
     </div>
     <div class="f-bottom">
       <div>© 2026 Autopartes Barrancas. Todos los derechos reservados.</div>
-      <a class="f-credit" href="https://www.prdr.ar" target="_blank" rel="noopener" title="Diseño y desarrollo: prdr IA">
-        <span>Diseño y desarrollo</span>
-        <!-- Logo prdr IA -->
-        <svg width="86" height="26" viewBox="0 0 172 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="prdr IA">
-          <text x="0" y="37" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="800" letter-spacing="-1.5" class="prdr-word" fill="#c8cfd8">prdr</text>
-          <rect x="86" y="8" width="56" height="36" rx="9" fill="url(#prdrGrad)"/>
-          <text x="98" y="35" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="800" fill="#0b0d10">IA</text>
-          <circle cx="133" cy="17" r="2.6" fill="#0b0d10"/>
-          <path d="M133 20v6m0 0h-5" stroke="#0b0d10" stroke-width="2" stroke-linecap="round"/>
-          <defs>
-            <linearGradient id="prdrGrad" x1="86" y1="8" x2="142" y2="44" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#7c5cff"/>
-              <stop offset="1" stop-color="#4f46e5"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </a>
+      <a class="f-credit" href="https://www.prdr.ar/sistemas" target="_blank" rel="noopener">Desarrolla <strong>PRDR IA</strong></a>
     </div>
   </div>
 </footer>
